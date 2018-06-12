@@ -6,21 +6,238 @@
         <!-- character encoding -->
         <meta charset="UTF-8">
         <!-- title tag -->
-        <title>Product/Company Page Project</title>
+        <title>Captain Pizza</title>
         <!-- mobile-friendly viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- W3.CSS stylesheet -->
         <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- custom style -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     </head>
 
     <body>
-        
-        <h1>Hello World!</h1>
-            
-            <p>Testing Github and Netlify</p>
-        
-    </body>
 
-</html>
+        <!-- top nav, desktop and tablet -->
+
+        <div class="w3-bar w3-theme w3-top" style="z-index: 999;">
+            <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="topNav()">&#9776;</a>
+        </div>
+
+        <!-- top nav, mobile -->
+
+        <div id="mobileTopNav" class="w3-bar-block w3-theme-l1 w3-hide w3-hide-large w3-hide-medium w3-top">
+            <a href="#menu" class="w3-bar-item w3-button">Menu</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+            <div class="w3-display-middle" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-xlarge w3-wide w3-animate-opacity"><img src="img/captainpizzalogo2.png">
+                    </div>
+            </div>
+
+            
+
+            <!-- Menu Container -->
+            <div class="w3-container w3-theme w3-padding-32 w3-xlarge" id="menu">
+                <div class="w3-content">
+
+                    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Menu</h1>
+                    <div class="w3-row w3-center w3-border w3-border-red">
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+                            <div class="w3-col s4 tablink w3-padding-large w3-hover-theme">Pizza</div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Sandwiches');">
+                            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Sandwiches</div>
+                        </a>
+                        <a href="javascript:void(0)" onclick="openMenu(event, 'Appetizers');">
+                            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Appetizers</div>
+                        </a>
+                    </div>
+
+                    <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+                        <h1><b>Toppings</b></h1>
+                        <p class="w3-text-grey">anchovies, artichokes, bacon, basil, barbeque sauce, chicken, black olives, broccoli, buffalo chicken, caramelized onions, eggplant, feta cheese, mozzarella cheese, garlic, green peppers, grilled chicken, ground beef, ham, hamburger, jalapenos, meatball, mushrooms, onion, pepperoni, pesto, pineapple, red peppers, sausage, spinach, tomatoes, teriyaki chicken</p>
+                        <hr>
+                        
+                        <h1><b>1 Topping Custom</b> <span class="w3-right w3-tag w3-red w3-padding-left">16" $14.35</span><span class="w3-right w3-tag w3-theme w3-padding-right">10" $8.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>2 Topping Custom</b> <span class="w3-right w3-tag w3-red w3-padding-left">16" $15.35</span><span class="w3-right w3-tag w3-theme w3-padding-right">10" $9.50</span></h1>
+                        <hr>
+                        
+                        <h1><b>3 Topping Custom</b> <span class="w3-right w3-tag w3-red w3-padding-left">16" $16.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">10" $9.95</span></h1>
+                        <hr>
+                        
+                        <h1><b>4 Topping Custom</b> <span class="w3-right w3-tag w3-red w3-padding-left">16" $16.95</span><span class="w3-right w3-tag w3-theme w3-padding-right">10" $10.40</span></h1>
+                        <hr>
+                        
+                        <h1><b>Asian</b> <span class="w3-right w3-tag w3-red">$10.40</span></h1>
+                        <p class="w3-text-grey">chicken teriyaki, imported ham, pineapple</p>
+                        <hr>
+
+                        <h1><b>Brazillian</b> <span class="w3-right w3-tag w3-red">$9.50</span></h1>
+                        <p class="w3-text-grey">tomato sauce, fresh sliced tomatoes, imported ham, hard boiled egg, black olives, sausage</p>
+                        <hr>
+
+                        <h1><b>Breakfast</b> <span class="w3-right w3-tag w3-red">$11.25</span></h1>
+                        <p class="w3-text-grey">scrambled eggs, sliced ham, choice of American or Mozarella cheese, choice of mushrooms, onions or peppers</p>
+                        <hr>
+
+                        <h1><b>Californian</b> <span class="w3-right w3-tag w3-red">$10.40</span></h1>
+                        <p class="w3-text-grey">artichoke hearts, fresh spinach, baked eggplant, sliced tomatoes</p>
+                        <hr>
+
+                        <h1><b>Buffalo Chicken</b><span class="w3-right w3-tag w3-red">$11.25</span></h1>
+                        <p class="w3-text-grey">Buffalo sauce, blended cheese, spicy grilled chicken, sun-dried tomatoes, onions, bacon, bleu cheese drizzle</p>
+                        <hr>
+
+                        <h1><b>Captain's Special</b><span class="w3-right w3-tag w3-red">$11.25</span></h1>
+                        <p class="w3-text-grey">pepperoni, sausage, imported ham, fresh mushrooms, onions, green peppers</p>
+                        <hr>
+                        
+                        <h1><b>Cheeseburger</b><span class="w3-right w3-tag w3-red">$11.25</span></h1>
+                        <p class="w3-text-grey">ground beef, American cheese, lettuce, tomato, pickles, onions, ketchup, mustard</p>
+                        <hr>
+                        
+                        <h1><b>Chicken Caesar</b><span class="w3-right w3-tag w3-red">$11.25</span></h1>
+                        <p class="w3-text-grey">Caesar dressing, grilled chicken, parmesan cheese, fresh romaine lettuce</p>
+                        <hr>
+                        
+                        <h1><b>Four Cheese</b><span class="w3-right w3-tag w3-red">$9.95</span></h1>
+                        <p class="w3-text-grey">mozzarella, cheddar, feta, parmesan</p>
+                        <hr>
+                        
+                        <h1><b>Margherita</b><span class="w3-right w3-tag w3-red">$9.95</span></h1>
+                        <p class="w3-text-grey">Fresh mozzarella, diced tomatoes, fresh basil, Romano cheese</p>
+                       
+                    </div>
+
+                    <div id="Sandwiches" class="w3-container menu w3-padding-32 w3-white">
+                        <h1><b>BLT</b> <span class="w3-right w3-tag w3-red">$7.00</span></h1>
+                        <p class="w3-text-grey">crispy bacon, mayo, lettuce, tomatoes</p>
+                        <hr>
+
+                        <h1><b>HTB</b> <span class="w3-right w3-tag w3-red">$7.65</span></h1>
+                        <p class="w3-text-grey">imported ham, sliced turkey, mayo, lettuce, tomatoes, crispy bacon</p>
+                        <hr>
+
+                        <h1><b>Chicken and Bacon</b> <span class="w3-right w3-tag w3-red">$7.65</span></h1>
+                        <p class="w3-text-grey">fried chicken, mayonaise, lettuce, tomatoes, crispy bacon</p>
+                        <hr>
+
+                        <h1><b>Salami and Bacon</b> <span class="w3-right w3-tag w3-red">$7.65</span></h1>
+                        <p class="w3-text-grey">grilled cheeseburger, mayo, lettuce, tomatoes, bacon</p>
+                        <hr>
+                        
+                        <h1><b>Bacon Cheeseburger Club</b> <span class="w3-right w3-tag w3-red">$7.65</span></h1>
+                        <p class="w3-text-grey">Genao salami, mayonaise, lettuce, tomatoes, crispy bacon</p>
+                    </div>
+
+
+                    <div id="Appetizers" class="w3-container menu w3-padding-32 w3-white">
+                        <h1><b>French Fries</b> <span class="w3-right w3-tag w3-red w3-padding-left">Large $4.95</span><span class="w3-right w3-tag w3-theme w3-padding-right">Small $3.95</span></h1>
+                        <hr>
+                        
+                        <h1><b>Onion Rings</b> <span class="w3-right w3-tag w3-red w3-padding-left">Large $4.95</span><span class="w3-right w3-tag w3-theme w3-padding-right">Small $3.95</span></h1>
+                        <hr>
+                        
+                        <h1><b>Chicken Tenders</b> <span class="w3-right w3-tag w3-red w3-padding-left">Large $14.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">Small $7.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>BBQ Chicken Tenders</b> <span class="w3-right w3-tag w3-red w3-padding-left">Large $14.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">Small $7.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>Mozzarella Sticks</b> <span class="w3-right w3-tag w3-red w3-padding-left">14 Piece $14.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">7 Piece $7.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>Chicken Wings</b> <span class="w3-right w3-tag w3-red w3-padding-left">14 Piece $14.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">7 Piece $7.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>BBQ Chicken Wings</b> <span class="w3-right w3-tag w3-red w3-padding-left">14 Piece $14.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">7 Piece $7.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>Buffalo Chicken Wings</b> <span class="w3-right w3-tag w3-red w3-padding-left">14 Piece $14.25</span><span class="w3-right w3-tag w3-theme w3-padding-right">7 Piece $7.75</span></h1>
+                        <hr>
+                        
+                        <h1><b>Garden Salad</b><span class="w3-right w3-tag w3-red">$6.50</span></h1>
+                        <p class="w3-text-grey">iceburg lettuce, tomatoes, cucumbers, broccoli, carrots</p>
+                        <hr>
+
+                        <h1><b>Spinach Salad</b><span class="w3-right w3-tag w3-red">$6.50</span></h1>
+                        <p class="w3-text-grey">spinach, tomatoes, cucumbers, broccoli, carrots</p>
+                        <hr>
+
+                        <h1><b>Cheese Salad</b><span class="w3-right w3-tag w3-red">$7.40</span></h1>
+                        <p class="w3-text-grey">iceburg lettuce, mozzarella cheese, tomatoes, cucumbers, broccoli, carrots</p>
+                        <hr>
+
+                        <h1><b>Chef Salad</b> <span class="w3-right w3-tag w3-red">$7.95</span></h1>
+                        <p class="w3-text-grey">iceburg lettuce, imported ham, mozzarella cheese, provolone cheese, tomatoes, cucumbers, broccoli, carrots</p>
+                        <hr> 
+                        
+                        <h1><b>Caesar Salad</b> <span class="w3-right w3-tag w3-red">$7.95</span></h1>
+                        <p class="w3-text-grey">romaine lettuce, feta cheese, croutons, caesar dressing</p>
+                        <hr> 
+                        
+                    </div><br>
+
+                </div>
+            </div>
+
+            <!-- Contact Container -->
+            <div id="contact">
+                <h1 class="w3-center w3-jumbo" style="margin-bottom:10px">Contact</h1>
+            <div class="w3-container w3-padding-32" id="about">
+                <div class="w3-row">
+                    <div class="w3-third">
+                        <div class="w3-card-2">
+                            <div class="w3-center w3-jumbo">
+                                <i class="fa fa-phone w3-text-red"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-red">
+                                <a class="w3-button w3-xlarge w3-red w3-hover-red">978-975-1230</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="w3-third">
+                        <div class="w3-card-2">
+                            <div class="w3-center w3-jumbo">
+                                <i class="fa fa-instagram w3-text-red"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-red">
+                                <a href="https://www.instagram.com/captainpizza_n.andover/" class="w3-button w3-xlarge w3-red w3-hover-red" target="_blank">Instagram</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="w3-third">
+                        <div class="w3-card-2">
+                            <div class="w3-center w3-jumbo">
+                                <i class="fa fa-facebook-square w3-text-red"></i>
+                            </div>
+                            <div class="w3-container w3-center w3-red">
+                                <a href="https://www.facebook.com/captainpizza114/" class="w3-button w3-xlarge w3-red w3-hover-red" target="_blank">Facebook</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+
+            <script src="js/topnav.js"></script>
+            <script src="js/menu.js"></script>
+            </body>
+
+        </html>
